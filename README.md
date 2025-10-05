@@ -53,11 +53,11 @@ docker run -dt --name flask-container -h flask -p 5000:80 flask-meme-app
 
 Access in your browser:
 
-http://localhost:5000
+* http://localhost:5000
 
-http://localhost:5000/response
+* http://localhost:5000/response
 
-http://localhost:5000/meme
+* http://localhost:5000/meme
 
 🧰 Run with Docker Compose
 ```bash
@@ -133,18 +133,24 @@ flask-meme-app/
 
 🧪 Example Endpoints
 
-Endpoint	    Description
-* /	Main        page
-* /meme	        Returns a random meme
-* /response	    Example JSON response
+Endpoint -> Description
+* /	Main -> page
+* /meme -> Returns a random meme
+* /response -> Example JSON response
+
 
 🧑‍💻 Author
+
 Dennys Cedeño Ramos
+
 📍 New York, USA
+
 💼 Singularity Box
+
 🚀 Networking • Cloud • DevOps • Python • Docker
 
 📄 License
+
 This project is open source and available under the MIT License.
 
 ```yaml
