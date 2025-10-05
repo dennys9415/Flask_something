@@ -52,6 +52,7 @@ docker run -dt --name flask-container -h flask -p 5000:80 flask-meme-app
 ```
 
 Access in your browser:
+
 http://localhost:5000
 
 http://localhost:5000/response
@@ -75,15 +76,15 @@ docker compose down
 🧱 Jenkins Pipeline
 This repository includes a Jenkinsfile that:
 
-Checks out the repository
+* Checks out the repository
 
-Builds the Docker image
+* Builds the Docker image
 
-Runs the container
+* Runs the container
 
-Tests the app endpoint
+* Tests the app endpoint
 
-Cleans up the environment
+* Cleans up the environment
 
 Command example (inside Jenkins pipeline):
 
@@ -105,18 +106,19 @@ It runs automatically on each push or pull request to the main branch.
 
 Workflow steps:
 
-Checkout repository
+* Checkout repository
 
-Build Docker image
+* Build Docker image
 
-Run Flask container
+* Run Flask container
 
-Test endpoint (curl -f http://localhost:80)
+* Test endpoint (curl -f http://localhost:80)
 
-Stop and remove containers
+* Stop and remove containers
 
 🗂 Project Structure
 
+```
 flask-meme-app/
 ├── app.py
 ├── requirements.txt
@@ -127,12 +129,14 @@ flask-meme-app/
 │   └── workflows/
 │       └── docker-build.yml
 └── README.md
+```
 
 🧪 Example Endpoints
-Endpoint	Description
-/	Main page
-/meme	Returns a random meme
-/response	Example JSON response
+
+Endpoint	    Description
+* /	Main        page
+* /meme	        Returns a random meme
+* /response	    Example JSON response
 
 🧑‍💻 Author
 Dennys Cedeño Ramos
