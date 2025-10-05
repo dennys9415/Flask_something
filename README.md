@@ -22,30 +22,35 @@ Clone the repository:
 ```bash
 git clone https://github.com/yourusername/flask-meme-app.git
 cd flask-meme-app
+```
 Install dependencies:
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
+```
+
 Run Flask app:
 
-bash
-Copy code
+```bash
 python app.py
 # or
 flask run
+```
+
 Open your browser:
 👉 http://127.0.0.1:5000
 
 🐳 Run with Docker
 Build image
-bash
-Copy code
+```bash
 docker build -t flask-meme-app .
+```
 Run container
-bash
-Copy code
+
+```bash
 docker run -dt --name flask-container -h flask -p 5000:80 flask-meme-app
+```
+
 Access in your browser:
 http://localhost:5000
 
@@ -54,17 +59,18 @@ http://localhost:5000/response
 http://localhost:5000/meme
 
 🧰 Run with Docker Compose
-bash
-Copy code
+```bash
 docker compose up --build
+```
 Then open:
 👉 http://localhost
 
 To stop containers:
 
-bash
-Copy code
+```bash
 docker compose down
+```
+
 ⚙️ Continuous Integration (CI/CD)
 🧱 Jenkins Pipeline
 This repository includes a Jenkinsfile that:
@@ -81,18 +87,20 @@ Cleans up the environment
 
 Command example (inside Jenkins pipeline):
 
-bash
-Copy code
+```bash
 docker compose build
 docker compose up -d
 curl -f http://localhost:80
 docker compose down
+```
+
 🧩 GitHub Actions
 Located at:
 
-bash
-Copy code
+```bash
 .github/workflows/docker-build.yml
+```
+
 It runs automatically on each push or pull request to the main branch.
 
 Workflow steps:
@@ -108,7 +116,7 @@ Test endpoint (curl -f http://localhost:80)
 Stop and remove containers
 
 🗂 Project Structure
-Copy code
+
 flask-meme-app/
 ├── app.py
 ├── requirements.txt
@@ -119,6 +127,7 @@ flask-meme-app/
 │   └── workflows/
 │       └── docker-build.yml
 └── README.md
+
 🧪 Example Endpoints
 Endpoint	Description
 /	Main page
@@ -134,9 +143,9 @@ Dennys Cedeño Ramos
 📄 License
 This project is open source and available under the MIT License.
 
-yaml
-Copy code
+```yaml
 
 ---
 
 Would you like me to make it bilingual (English + Spanish in sections) so it looks professional for both audiences?
+```
