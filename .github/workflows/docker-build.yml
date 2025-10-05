@@ -1,0 +1,37 @@
+name: Build and Test Flask App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: docker compose build
+
+      - name: Run container
+        run: docker compose up -d
+
+      - name: Wait for app to start
+        run: |
+          echo "Waiting for app to start..."
+          sleep 5
+
+      - name: Test app endpoint
+        run: |
+          curl -f http://localhost:80 || (echo "App test failed!" && exit 1)
+
+      - name: Stop and remove containers
+        if: always()
+        run: docker compose down
